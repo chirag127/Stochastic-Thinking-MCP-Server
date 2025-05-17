@@ -1,0 +1,33 @@
+{
+  "name": "stochastic-thinking-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol (MCP) server that provides stochastic algorithms and probabilistic decision-making capabilities",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "build": "npm run build:clean && npm run build:bundle",
+    "build:clean": "rimraf dist",
+    "build:bundle": "esbuild index.js --bundle --platform=node --target=node18 --outfile=dist/stochastic-thinking-mcp-server.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stochastic",
+    "algorithms",
+    "decision-making"
+  ],
+  "author": "Chirag Singhal (chirag127)",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.11.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "rimraf": "^5.0.10"
+  },
+  "bin": {
+    "stochastic-thinking-mcp-server": "./dist/cli.js"
+  }
+}
