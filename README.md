@@ -1,5 +1,6 @@
 # Stochastic Thinking MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@chirag127/stochastic-thinking-mcp-server)](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server)
 ![MCP Badge](https://img.shields.io/badge/MCP-Compatible-blue)
 
 A Model Context Protocol (MCP) server that provides stochastic algorithms and probabilistic decision-making capabilities, extending sequential thinking with advanced mathematical models.
@@ -95,6 +96,15 @@ Best for:
 
 ## Installation
 
+### Installing via Smithery
+
+To install stochastic-thinking-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server):
+
+```bash
+npx -y @smithery/cli install @chirag127/stochastic-thinking-mcp-server --client claude
+```
+
+### Manual Installation
 ```bash
 # Clone the repository
 git clone https://github.com/chirag127/Stochastic-Thinking-MCP-Server.git
