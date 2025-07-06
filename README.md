@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/chirag127-stochastic-thinking-mcp-server-badge.png)](https://mseep.ai/app/chirag127-stochastic-thinking-mcp-server)
+
 # Stochastic Thinking MCP Server
 
 [![smithery badge](https://smithery.ai/badge/@chirag127/stochastic-thinking-mcp-server)](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server)
