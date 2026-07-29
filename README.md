@@ -9,7 +9,7 @@
 
 A Model Context Protocol (MCP) server that provides stochastic algorithms and probabilistic decision-making capabilities, extending sequential thinking with advanced mathematical models.
 
-**Live page:** https://Stochastic-Thinking-MCP-Server.oriz.in
+**Live page:** <https://Stochastic-Thinking-MCP-Server.oriz.in>
 
 ## Why Stochastic Thinking Matters
 
