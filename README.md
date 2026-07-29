@@ -4,10 +4,12 @@
 
 [![smithery badge](https://smithery.ai/badge/@chirag127/stochastic-thinking-mcp-server)](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server)
 ![MCP Badge](https://img.shields.io/badge/MCP-Compatible-blue)
+[![Stars](https://img.shields.io/github/stars/chirag127/Stochastic-Thinking-MCP-Server?style=social)](https://github.com/chirag127/Stochastic-Thinking-MCP-Server/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/chirag127/Stochastic-Thinking-MCP-Server/blob/main/LICENSE)
 
 A Model Context Protocol (MCP) server that provides stochastic algorithms and probabilistic decision-making capabilities, extending sequential thinking with advanced mathematical models.
 
-*Last updated: May 17, 2025 22:30:57 UTC*
+**Live page:** https://Stochastic-Thinking-MCP-Server.oriz.in
 
 ## Why Stochastic Thinking Matters
 
