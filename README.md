@@ -10,13 +10,13 @@ MCP server providing stochastic algorithms and probabilistic decision-making too
 
 ## Algorithms
 
-| Algorithm | Use case |
-|-----------|----------|
-| **MDP** — Markov Decision Processes | Sequential decisions with defined rewards |
-| **MCTS** — Monte Carlo Tree Search | Game/strategy planning over large decision spaces |
-| **Multi-Armed Bandit** | A/B testing, resource allocation, online learning |
-| **Bayesian Optimization** | Hyperparameter tuning, expensive function optimization |
-| **HMM** — Hidden Markov Models | Time series, pattern recognition, state inference |
+| Algorithm                           | Use case                                               |
+|-------------------------------------|--------------------------------------------------------|
+| **MDP** — Markov Decision Processes | Sequential decisions with defined rewards              |
+| **MCTS** — Monte Carlo Tree Search  | Game/strategy planning over large decision spaces      |
+| **Multi-Armed Bandit**              | A/B testing, resource allocation, online learning      |
+| **Bayesian Optimization**           | Hyperparameter tuning, expensive function optimization |
+| **HMM** — Hidden Markov Models      | Time series, pattern recognition, state inference      |
 
 ## Installation
 
