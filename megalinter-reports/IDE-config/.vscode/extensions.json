@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "Bridgecrew.checkov",
+        "MS-CST-E.vscode-devskim",
+        "streetsidesoftware.code-spell-checker",
+        "exiasr.hadolint",
+        "esbenp.prettier-vscode",
+        "HTMLHint.vscode-htmlhint",
+        "monosans.djlint",
+        "standard.vscode-standard",
+        "AquaSecurityOfficial.trivy-vulnerability-scanner"
+    ]
+}
