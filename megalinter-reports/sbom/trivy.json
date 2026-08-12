@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:86d4a7c0-268d-4190-b1ad-6c99de414c88",
+    "serialNumber": "urn:uuid:400816dd-4287-4b98-9078-5943514417d4",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-07-29T09:48:13+00:00",
+        "timestamp": "2026-08-12T20:34:28+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "256fbdd2-ff44-40b1-9cb4-d47375fee6e2",
+            "bom-ref": "649608c4-f7b4-4315-a379-d9da7f858679",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "2758160c-8537-4e78-9af0-d6a7226b5f86",
+            "bom-ref": "cef3d75e-9663-4e88-baa7-dbbd9133c9d4",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -1510,13 +1510,13 @@
     ],
     "dependencies": [
         {
-            "ref": "256fbdd2-ff44-40b1-9cb4-d47375fee6e2",
+            "ref": "649608c4-f7b4-4315-a379-d9da7f858679",
             "dependsOn": [
-                "2758160c-8537-4e78-9af0-d6a7226b5f86"
+                "cef3d75e-9663-4e88-baa7-dbbd9133c9d4"
             ]
         },
         {
-            "ref": "2758160c-8537-4e78-9af0-d6a7226b5f86",
+            "ref": "cef3d75e-9663-4e88-baa7-dbbd9133c9d4",
             "dependsOn": [
                 "pkg:npm/%40modelcontextprotocol/sdk@1.11.4"
             ]
