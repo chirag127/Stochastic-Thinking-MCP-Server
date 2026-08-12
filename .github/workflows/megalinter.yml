@@ -35,7 +35,7 @@ jobs:
 
       - name: Commit and push applied linter fixes
         if: steps.ml.outputs.has_updated_sources == 1
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           branch: ${{ github.event.pull_request.head.ref || github.ref_name }}
           commit_message: "ci: apply linters auto-fixes"
