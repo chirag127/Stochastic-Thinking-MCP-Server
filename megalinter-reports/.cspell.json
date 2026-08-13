@@ -107,6 +107,7 @@
         "ollama",
         "onclose",
         "onsessioninitialized",
+        "opencode",
         "oriz",
         "oterm",
         "permissioning",

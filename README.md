@@ -42,13 +42,13 @@ flowchart LR
 
 ## Algorithms
 
-| Algorithm | Use case |
-| --- | --- |
-| **MDP** — Markov Decision Processes | Sequential decisions with defined rewards |
-| **MCTS** — Monte Carlo Tree Search | Game/strategy planning over large decision spaces |
-| **Multi-Armed Bandit** | A/B testing, resource allocation, online learning |
-| **Bayesian Optimization** | Hyperparameter tuning, expensive-function optimization |
-| **HMM** — Hidden Markov Models | Time series, pattern recognition, state inference |
+| Algorithm                           | Use case                                               |
+|-------------------------------------|--------------------------------------------------------|
+| **MDP** — Markov Decision Processes | Sequential decisions with defined rewards              |
+| **MCTS** — Monte Carlo Tree Search  | Game/strategy planning over large decision spaces      |
+| **Multi-Armed Bandit**              | A/B testing, resource allocation, online learning      |
+| **Bayesian Optimization**           | Hyperparameter tuning, expensive-function optimization |
+| **HMM** — Hidden Markov Models      | Time series, pattern recognition, state inference      |
 
 ## Features
 
@@ -138,8 +138,8 @@ HTTP_PORT=3778 node http.js       # Streamable HTTP at http://localhost:3778/mcp
 
 No configuration is required. Optional environment variables:
 
-| Variable | Purpose |
-| --- | --- |
+| Variable    | Purpose                                                 |
+|-------------|---------------------------------------------------------|
 | `HTTP_PORT` | Port for the Streamable HTTP transport (default `3778`) |
 
 ## Part of the oriz family
