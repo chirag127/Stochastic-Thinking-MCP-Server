@@ -183,6 +183,12 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 })
 
 async function runServer () {
+  if (process.env.HTTP_TRANSPORT === '1') {
+    const { startHttpTransport } = await import('./http.js')
+    await startHttpTransport(server)
+    console.error('Stochastic Thinking MCP Server running on Streamable HTTP')
+    return
+  }
   const transport = new StdioServerTransport()
   await server.connect(transport)
   console.error('Stochastic Thinking MCP Server running on stdio')

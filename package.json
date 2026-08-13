@@ -21,13 +21,13 @@
   "author": "Chirag Singhal (chirag127)",
   "license": "MIT",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.11.4"
+    "@modelcontextprotocol/sdk": "^1.29.0"
   },
   "devDependencies": {
     "esbuild": "^0.20.2",
     "rimraf": "^5.0.10"
   },
   "bin": {
-    "stochastic-thinking-mcp-server": "./dist/cli.js"
+    "stochastic-thinking-mcp-server": "./dist/stochastic-thinking-mcp-server.js"
   }
 }
