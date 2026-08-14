@@ -26,8 +26,8 @@
     "@modelcontextprotocol/sdk": "^1.29.0"
   },
   "devDependencies": {
-    "esbuild": "^0.20.2",
-    "rimraf": "^5.0.10",
+    "esbuild": "^0.28.2",
+    "rimraf": "^6.1.3",
     "vitest": "^4.1.10"
   },
   "bin": {
