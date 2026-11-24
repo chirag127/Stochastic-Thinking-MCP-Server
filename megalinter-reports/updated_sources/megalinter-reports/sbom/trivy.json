@@ -2,10 +2,10 @@
     "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
     "bomFormat": "CycloneDX",
     "specVersion": "1.6",
-    "serialNumber": "urn:uuid:4cd020af-7fab-4c6d-a49d-09bdc0be9c9d",
+    "serialNumber": "urn:uuid:24087cf5-945d-4d4f-8a49-00aa2c726ffd",
     "version": 1,
     "metadata": {
-        "timestamp": "2026-08-13T16:53:30+00:00",
+        "timestamp": "2026-11-24T16:05:01+00:00",
         "tools": {
             "components": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         "component": {
-            "bom-ref": "f8cfdf26-626a-4391-8ff0-559890b837e6",
+            "bom-ref": "294f3d06-29f0-4427-aa51-196b875fb5dd",
             "type": "application",
             "name": ".",
             "properties": [
@@ -30,7 +30,7 @@
     },
     "components": [
         {
-            "bom-ref": "a203ba8d-2e85-4ece-94fe-4e741eb5354d",
+            "bom-ref": "e9b88984-1d3a-40d5-8b32-736baedc7770",
             "type": "application",
             "name": "package-lock.json",
             "properties": [
@@ -1594,15 +1594,15 @@
             ]
         },
         {
-            "bom-ref": "pkg:npm/zod@4.4.3",
+            "bom-ref": "pkg:npm/zod@4.6.7",
             "type": "library",
             "name": "zod",
-            "version": "4.4.3",
-            "purl": "pkg:npm/zod@4.4.3",
+            "version": "4.6.7",
+            "purl": "pkg:npm/zod@4.6.7",
             "properties": [
                 {
                     "name": "aquasecurity:trivy:PkgID",
-                    "value": "zod@4.4.3"
+                    "value": "zod@4.6.7"
                 },
                 {
                     "name": "aquasecurity:trivy:PkgType",
@@ -1613,15 +1613,15 @@
     ],
     "dependencies": [
         {
-            "ref": "a203ba8d-2e85-4ece-94fe-4e741eb5354d",
+            "ref": "294f3d06-29f0-4427-aa51-196b875fb5dd",
             "dependsOn": [
-                "pkg:npm/%40modelcontextprotocol/sdk@1.30.0"
+                "e9b88984-1d3a-40d5-8b32-736baedc7770"
             ]
         },
         {
-            "ref": "f8cfdf26-626a-4391-8ff0-559890b837e6",
+            "ref": "e9b88984-1d3a-40d5-8b32-736baedc7770",
             "dependsOn": [
-                "a203ba8d-2e85-4ece-94fe-4e741eb5354d"
+                "pkg:npm/%40modelcontextprotocol/sdk@1.30.0"
             ]
         },
         {
@@ -1649,7 +1649,7 @@
                 "pkg:npm/pkce-challenge@5.0.0",
                 "pkg:npm/raw-body@3.0.2",
                 "pkg:npm/zod-to-json-schema@3.25.2",
-                "pkg:npm/zod@4.4.3"
+                "pkg:npm/zod@4.6.7"
             ]
         },
         {
@@ -2182,11 +2182,11 @@
         {
             "ref": "pkg:npm/zod-to-json-schema@3.25.2",
             "dependsOn": [
-                "pkg:npm/zod@4.4.3"
+                "pkg:npm/zod@4.6.7"
             ]
         },
         {
-            "ref": "pkg:npm/zod@4.4.3",
+            "ref": "pkg:npm/zod@4.6.7",
             "dependsOn": []
         }
     ],

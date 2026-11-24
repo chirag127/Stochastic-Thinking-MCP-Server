@@ -1,13 +1,13 @@
 {
     "recommendations": [
         "monosans.djlint",
-        "AquaSecurityOfficial.trivy-vulnerability-scanner",
         "MS-CST-E.vscode-devskim",
-        "Bridgecrew.checkov",
-        "HTMLHint.vscode-htmlhint",
         "esbenp.prettier-vscode",
-        "exiasr.hadolint",
         "standard.vscode-standard",
-        "streetsidesoftware.code-spell-checker"
+        "AquaSecurityOfficial.trivy-vulnerability-scanner",
+        "streetsidesoftware.code-spell-checker",
+        "exiasr.hadolint",
+        "HTMLHint.vscode-htmlhint",
+        "Bridgecrew.checkov"
     ]
 }
