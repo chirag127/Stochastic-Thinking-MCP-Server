@@ -1,146 +1,163 @@
-[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/chirag127-stochastic-thinking-mcp-server-badge.png)](https://mseep.ai/app/chirag127-stochastic-thinking-mcp-server)
-
 # Stochastic Thinking MCP Server
 
-[![smithery badge](https://smithery.ai/badge/@chirag127/stochastic-thinking-mcp-server)](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server)
-![MCP Badge](https://img.shields.io/badge/MCP-Compatible-blue)
+> Stochastic algorithms and probabilistic decision-making — as an MCP tool for AI agents.
 
-A Model Context Protocol (MCP) server that provides stochastic algorithms and probabilistic decision-making capabilities, extending sequential thinking with advanced mathematical models.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/chirag127/Stochastic-Thinking-MCP-Server/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/chirag127/Stochastic-Thinking-MCP-Server?style=flat)](https://github.com/chirag127/Stochastic-Thinking-MCP-Server/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/chirag127/Stochastic-Thinking-MCP-Server)](https://github.com/chirag127/Stochastic-Thinking-MCP-Server/commits)
+[![Node.js](https://img.shields.io/badge/Node.js-%3E=18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![smithery](https://smithery.ai/badge/@chirag127/stochastic-thinking-mcp-server)](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server)
 
-*Last updated: May 17, 2025 22:30:57 UTC*
+## What it is / why it exists
 
-## Why Stochastic Thinking Matters
+An [MCP](https://modelcontextprotocol.io) server that extends an agent's sequential thinking with **probabilistic decision-making**. When a problem involves uncertainty, sequential planning, or a large decision space, the agent calls one tool — `stochasticalgorithm` — and picks a mathematical model (MDP, MCTS, multi-armed bandit, Bayesian optimization, HMM) to escape local optima and explore alternative solution paths.
 
-When AI assistants make decisions - whether writing code, solving problems, or suggesting improvements - they often fall into patterns of "local thinking", similar to how we might get stuck trying the same approach repeatedly despite poor results. This is like being trapped in a valley when there's a better solution on the next mountain over, but you can't see it from where you are.
+One tool, five algorithms, zero required configuration.
 
-This server introduces advanced decision-making strategies that help break out of these local patterns:
+## Links
 
-- Instead of just looking at the immediate next step (like basic Markov chains do), these algorithms can look multiple steps ahead and consider many possible futures
-- Rather than always picking the most obvious solution, they can strategically explore alternative approaches that might initially seem suboptimal
-- When faced with uncertainty, they can balance the need to exploit known good solutions with the potential benefit of exploring new ones
+- **Live MCP endpoint:** <https://stochastic-thinking-mcp-server.oriz.in> (Streamable HTTP, MCP 2.0)
+- **GitHub Pages:** <https://chirag127.github.io/Stochastic-Thinking-MCP-Server/>
+- **Smithery:** <https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server>
+- **Repo:** <https://github.com/chirag127/Stochastic-Thinking-MCP-Server>
 
-Think of it as giving your AI assistant a broader perspective - instead of just choosing the next best immediate action, it can now consider "What if I tried something completely different?" or "What might happen several steps down this path?"
+⭐ If this is useful, please star the repo — it helps others find it.
+
+## Architecture
+
+```mermaid
+flowchart LR
+    Client["MCP Client<br/>(Claude, Cursor, opencode, ...)"]
+    subgraph Server["stochastic-thinking-mcp-server"]
+        Tool["stochasticalgorithm"]
+        Tool --> A1["MDP"]
+        Tool --> A2["MCTS"]
+        Tool --> A3["Bandit"]
+        Tool --> A4["Bayesian"]
+        Tool --> A5["HMM"]
+    end
+    Client -->|"Streamable HTTP (MCP 2.0) /mcp<br/>or stdio"| Server
+    Server -->|"formatted decision summary"| Client
+```
+
+## Algorithms
+
+| Algorithm                           | Use case                                               |
+|-------------------------------------|--------------------------------------------------------|
+| **MDP** — Markov Decision Processes | Sequential decisions with defined rewards              |
+| **MCTS** — Monte Carlo Tree Search  | Game/strategy planning over large decision spaces      |
+| **Multi-Armed Bandit**              | A/B testing, resource allocation, online learning      |
+| **Bayesian Optimization**           | Hyperparameter tuning, expensive-function optimization |
+| **HMM** — Hidden Markov Models      | Time series, pattern recognition, state inference      |
 
 ## Features
 
-### Stochastic Algorithms
+- Single `stochasticalgorithm` tool with an `algorithm` selector: `mdp` · `mcts` · `bandit` · `bayesian` · `hmm`
+- Two transports: **stdio** (local clients) and **Streamable HTTP** (MCP 2.0, remote)
+- Zero required configuration — no keys, no external calls
+- Installable via `npx`, [Smithery](https://smithery.ai), or the hosted endpoint
 
-#### Markov Decision Processes (MDPs)
-- Optimize policies over long sequences of decisions
-- Incorporate rewards and actions
-- Support for Q-learning and policy gradients
-- Configurable discount factors and state spaces
+## Tech stack
 
-#### Monte Carlo Tree Search (MCTS)
-- Simulate future action sequences
-- Balance exploration and exploitation
-- Configurable simulation depth and exploration constants
-- Ideal for large decision spaces
+- **Node.js** (ESM, `>=18`)
+- [`@modelcontextprotocol/sdk`](https://github.com/modelcontextprotocol/typescript-sdk) `^1.29`
+- `esbuild` bundle build, plain-JS test harness
 
-#### Multi-Armed Bandit Models
-- Balance exploration vs exploitation
-- Support multiple strategies:
-  - Epsilon-greedy
-  - UCB (Upper Confidence Bound)
-  - Thompson Sampling
-- Dynamic reward tracking
+## Repo structure
 
-#### Bayesian Optimization
-- Optimize decisions with uncertainty
-- Probabilistic inference models
-- Configurable acquisition functions
-- Continuous parameter optimization
+```
+Stochastic-Thinking-MCP-Server/
+├── index.js          # tool logic + stdio transport
+├── http.js           # Streamable HTTP transport (MCP 2.0) at /mcp
+├── test.js           # test harness
+├── docs/             # GitHub Pages landing (index.html + CNAME)
+├── Dockerfile        # container image
+├── smithery.yaml     # Smithery deploy config
+└── package.json
+```
 
-#### Hidden Markov Models (HMMs)
-- Infer latent states
-- Forward-backward algorithm
-- State sequence prediction
-- Emission probability modeling
+## Quick start
 
-## Algorithm Selection Guide
-
-Choose the appropriate algorithm based on your problem characteristics:
-
-### Markov Decision Processes (MDPs)
-Best for:
-- Sequential decision-making problems
-- Problems with clear state transitions
-- Scenarios with defined rewards
-- Long-term optimization needs
-
-### Monte Carlo Tree Search (MCTS)
-Best for:
-- Game playing and strategic planning
-- Large decision spaces
-- When simulation is possible
-- Real-time decision making
-
-### Multi-Armed Bandit
-Best for:
-- A/B testing
-- Resource allocation
-- Online advertising
-- Quick adaptation needs
-
-### Bayesian Optimization
-Best for:
-- Hyperparameter tuning
-- Expensive function optimization
-- Continuous parameter spaces
-- When uncertainty matters
-
-### Hidden Markov Models (HMMs)
-Best for:
-- Time series analysis
-- Pattern recognition
-- State inference
-- Sequential data modeling
-
-## Installation
-
-### Installing via Smithery
-
-To install stochastic-thinking-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server):
+### Install via Smithery
 
 ```bash
 npx -y @smithery/cli install @chirag127/stochastic-thinking-mcp-server --client claude
 ```
 
-### Manual Installation
-```bash
-# Clone the repository
-git clone https://github.com/chirag127/Stochastic-Thinking-MCP-Server.git
-cd Stochastic-Thinking-MCP-Server
+### MCP client config
 
-# Install dependencies
-npm install
+Hosted (Streamable HTTP):
 
-# Start the server
-npm start
+```json
+{
+  "mcpServers": {
+    "stochastic-thinking": {
+      "url": "https://stochastic-thinking-mcp-server.oriz.in/mcp"
+    }
+  }
+}
 ```
 
-## Usage
+Local (stdio):
 
-The server exposes a single tool called `stochasticalgorithm` that can be used to apply various stochastic algorithms to decision-making problems.
+```json
+{
+  "mcpServers": {
+    "stochastic-thinking": {
+      "command": "node",
+      "args": ["/path/to/Stochastic-Thinking-MCP-Server/index.js"]
+    }
+  }
+}
+```
 
-Example usage:
+### Run it yourself
+
+```bash
+npm install
+npm start                         # stdio
+HTTP_PORT=3778 node http.js       # Streamable HTTP at http://localhost:3778/mcp
+```
+
+### Call the tool
 
 ```json
 {
   "algorithm": "mdp",
   "problem": "Optimize route selection for delivery vehicles",
-  "parameters": {
-    "states": 10,
-    "gamma": 0.95,
-    "learningRate": 0.1
-  }
+  "parameters": { "states": 10, "gamma": 0.95, "learningRate": 0.1 }
 }
 ```
 
+### Register it
+
+- **MCP Registry:** <https://registry.modelcontextprotocol.io>
+- **Smithery:** `@chirag127/stochastic-thinking-mcp-server` — <https://smithery.ai/server/@chirag127/stochastic-thinking-mcp-server>
+
+## Configuration
+
+No configuration is required. Optional environment variables:
+
+| Variable    | Purpose                                                 |
+|-------------|---------------------------------------------------------|
+| `HTTP_PORT` | Port for the Streamable HTTP transport (default `3778`) |
+
+## Part of the oriz family
+
+One of ~80 sites and tools in the [oriz](https://blog.oriz.in) family. Pairs with the [Clear Thought MCP Server](https://github.com/chirag127/Clear-Thought-MCP-server) (structured reasoning) and [knowledge-mcp](https://github.com/chirag127/knowledge-mcp) (knowledge base).
+
+## Contributing
+
+Issues and PRs welcome. Conventional commits are the changelog.
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
 
 ## Author
 
-Chirag Singhal (chirag127)
+Chirag Singhal · <chirag@oriz.in> · [@chirag127](https://github.com/chirag127)
+
+## Status
+
+Stable. Roadmap: more algorithms, richer parameter validation.

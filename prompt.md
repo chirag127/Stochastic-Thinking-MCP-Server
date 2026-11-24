@@ -83,7 +83,7 @@ Sequential data modeling
 
 the code is as follows:
 
-#!/usr/bin/env node
+# !/usr/bin/env node
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CallToolRequestSchema, ListToolsRequestSchema, McpError, ErrorCode, } from "@modelcontextprotocol/sdk/types.js";
@@ -247,7 +247,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         case "stochasticalgorithm":
             return stochasticServer.processAlgorithm(request.params.arguments);
         default:
-            throw new McpError(ErrorCode.MethodNotFound, `Unknown tool: ${request.params.name}`);
+            throw new McpError(ErrorCode.MethodNotFound,`Unknown tool: ${request.params.name}`);
     }
 });
 async function runServer() {

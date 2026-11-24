@@ -1,0 +1,5 @@
+# MegaLinter — everything enabled, everything auto-fixed, never blocks.
+APPLY_FIXES: all
+DISABLE_ERRORS: true
+SHOW_ELAPSED_TIME: true
+FLAVOR_SUGGESTIONS: false
